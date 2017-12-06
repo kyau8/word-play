@@ -1,0 +1,28 @@
+/* HEADER STYLES */
+
+h1 {
+    font-family: $secondaryText;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    padding: 0;
+    margin: 50px 0 10px 0;
+}
+
+.titleText {
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+}
+
+.introText {
+    font-size: 1.0rem;
+}
+
+.introText a:hover {
+    color: $accentColor;
+}
+
+@media (max-width: 400px) {
+    .introText {
+        width: 250px;
+    }
+}

@@ -1,0 +1,79 @@
+/* HINT SECTION STYLES */
+button {
+    width: 140px;
+    height: 30px;
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    transition: all 0.8s;
+}
+
+.hintButton {
+    background: $accentColor;
+    margin: 10px 0;
+}
+
+.hintButton:hover {
+    background: white;
+    border: 1px dotted $accentColor;
+    color: $accentColor;
+}
+
+#hintText {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    display: none;
+}
+
+@media (max-width: 540px) {
+    #hintText {
+        width: 80%;
+    }
+}
+
+@media (max-width: 400px) {
+    #hintText {
+        width: 320px;
+    }
+}
+
+@media (max-width: 330px) {
+    #hintText {
+        width: 260px;
+    }
+}
+
+/* SKIP SECTION STYLES */
+
+.skipButton {
+    background: $primaryColor;
+}
+
+.skipButton:hover {
+    background: white;
+    border: 1px dotted $primaryColor;
+    color: $primaryColor;
+}
+
+/* NEXT QUESTION BUTTON */
+.nextButton {
+    background: $primaryColor;
+    display: none;
+}
+
+.nextButton:hover {
+    background: white;
+    color: $primaryColor;
+    border: 1px dotted $primaryColor;
+}
+
+/* POINT SECTION STYLES */
+h3 {
+    font-size: 1.2rem;
+}
+
+.pointsNum {
+    color: $accentColor;
+    text-shadow:0.5px 0.5px 1px gray;
+}

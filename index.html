@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>/wərd/play</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Rubik:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Credits: Title text text shadow code from Joshua Johnson (https://designshack.net/articles/css/12-fun-css-text-shadows-you-can-copy-and-paste/); jquery auto-tab plugin from Mathachew -->
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <h1 class="titleText">/wərd/Play</h1>
+            <p class="introText">A beverage-themed word game based on the <a href="https://developer.oxforddictionaries.com/">Oxford English Dictionary API</a>.</p>
+                <section class="pointsSection">
+                <div class="miniWrapper">
+                    <h3>[<span class="pointsNum"></span>/60]</h3>
+                    </div>
+                </section>
+            </div>
+    </header>
+    <div class="wrapper">
+        <section class="questionSection">
+            <div class="miniWrapper">
+                <section>
+                    <form action="" class="mainForm">
+
+                        <div class="quizAnswer"></div>
+                        <div class="quizQuestion">
+                        </div>
+                        <input type="submit" value= "Am I right?" class="submit">
+                    </form>
+                </section>
+                <section class="quizHint">
+            
+                    <button class= "hintButton">Hint</button>
+                    <!-- <p><a href="" class="hintButton">Hint</a></p> -->
+                    <p id="hintText"></p>
+
+                </section>
+            </div>
+        </section>
+    </div>
+    <section class="skipSection">
+        <div class="wrapper">
+            <button class="skipButton">Skip</button>
+            <!-- <p><a href="" class="skipButton">Skip</a></p> -->
+        </div>
+    </section>
+    <section class="nextSection">
+        <div class="wrapper">
+            <button class="nextButton">Next Question</button>
+        </div>
+    </section>
+    <section class="resultsSection">
+        <div class="resultsPage">
+            <div class="results">
+            </div>
+            <p><a href="" class="playAgainButton">Play Again!</a></p>
+        </div>
+    </section>
+    <footer>
+        <div class="wrapper">
+            <p>Created by <a href="https://twitter.com/kyau8" class="footerText">@kyau8</a></p>
+        </div>
+    </footer>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    <script src="jquery.autotab.min.js"></script>
+    <script src='scripts.js'></script>
+</body>
+</html>

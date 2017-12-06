@@ -1,0 +1,84 @@
+/* QUESTION SECTION STYLES */
+
+.quizQuestion {
+    margin: 20px 0;
+}
+
+.wordSpace {
+    background-color: white;
+    border: none;
+}
+
+input {
+    margin: 1px;
+    width: 30px;
+    height: 40px;
+    font-size: 1.8rem;
+    border: none;
+    background: $secondaryColor;
+    color: $primaryColor;
+    text-align: center;
+    border-bottom: 1px solid $secondaryColor;
+}
+
+@media (max-width: 450px) {
+    input {
+        width: 22px;
+        font-size: 1.6rem;
+    }
+    .quizAnswer {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 350px) {
+    input {
+        width: 20px;
+        font-size: 1.4rem;
+    }
+    .quizAnswer {
+        font-size: 1.0rem;
+    }
+}
+
+@media (max-width: 320px) {
+    input {
+        width: 18px;
+        font-size: 1.3rem;
+    }
+}
+
+.submit {
+    font-family: $primaryText;
+    width: 140px;
+    height: 30px;
+    font-size: 1.0rem;
+    color: white;
+    text-transform: uppercase;
+    transition: all 0.8s;
+}
+
+.submit:hover {
+    background: white;
+    border: 1px dotted $secondaryColor;
+    color: $secondaryColor;
+}
+
+.quizAnswer {
+    font-size: 1.6rem;
+    letter-spacing: 1.5px;
+    display: none;
+    margin: 8px 0 10px 0;
+}
+
+@media (max-width: 450px) {
+    .quizAnswer {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .quizAnswer {
+        font-size: 1.0rem;
+    }
+}
