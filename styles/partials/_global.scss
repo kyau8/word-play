@@ -1,17 +1,19 @@
-/* GLOBAL STYLES */
+/* VARIABLES */
 $primaryText: 'Fira Sans', sans-serif;
 $secondaryText: 'Rubik', sans-serif;
 $primaryColor: black;
-$secondaryColor: #418DFF;
+$secondaryColor: rgb(112, 167, 250);
 $accentColor: #FF9A08;
+
+/* GLOBAL STYLES */
 
 body {
     background-color: white;
     font-size: 62.5%;
-    font-family: $primaryText;
+    // font-family: $primaryText;
 }
 
-p {
+h1, h2, h3, h4, h5, h6, p, a {
     padding: 0;
     margin: 0;
 }
@@ -21,11 +23,10 @@ a {
     color: $primaryColor;
 }
 
-h2 {
-    padding: 0;
-}
+
 .wrapper {
     max-width: 780px;
+    width: 80%;
     margin: 0 auto;
 }
 

@@ -11,47 +11,41 @@
 </head>
 <body>
     <header>
-        <div class="wrapper">
-            <h1 class="titleText">/wərd/Play</h1>
+        <div class="wrapper headerWrap">
+            <div class="title">
+                <h1 class="titleText">/wərd/</h1>
+                <h1 class="titleText title-2">Play</h1>
+            </div>
+            <p class="introText">Can you name every beverage-related word in the Oxford English Dictionary? Take a guess by submitting your response below. Click hint for some extra help, or skip the question if you don't know the answer! All you need to do is reach 60 points to prove your beverage prowess.</p>
+            
+            <!-- <h1 class="titleText">/wərd/Play</h1>
             <p class="introText">A beverage-themed word game based on the <a href="https://developer.oxforddictionaries.com/">Oxford English Dictionary API</a>.</p>
                 <section class="pointsSection">
                 <div class="miniWrapper">
                     <h3>[<span class="pointsNum"></span>/60]</h3>
                     </div>
-                </section>
-            </div>
-    </header>
-    <div class="wrapper">
-        <section class="questionSection">
-            <div class="miniWrapper">
-                <section>
-                    <form action="" class="mainForm">
-
-                        <div class="quizAnswer"></div>
-                        <div class="quizQuestion">
-                        </div>
-                        <input type="submit" value= "Am I right?" class="submit">
-                    </form>
-                </section>
-                <section class="quizHint">
-            
-                    <button class= "hintButton">Hint</button>
-                    <!-- <p><a href="" class="hintButton">Hint</a></p> -->
-                    <p id="hintText"></p>
-
-                </section>
-            </div>
-        </section>
-    </div>
-    <section class="skipSection">
-        <div class="wrapper">
-            <button class="skipButton">Skip</button>
-            <!-- <p><a href="" class="skipButton">Skip</a></p> -->
+                </section> -->
         </div>
-    </section>
-    <section class="nextSection">
+    </header>
+    <section class="questionSection">
         <div class="wrapper">
-            <button class="nextButton">Next Question</button>
+                <form action="" class="mainForm">
+                    <div class="quizAnswer"></div>
+                    <div class="quizQuestion">
+                    </div>
+                    <p id="hintText"></p>
+                    <input type="submit" value= "Am I right?" class="submit">
+                </form>
+            </div>
+    </section>
+    <section>
+        <div class="wrapper quizButtons">
+            <button class= "hintButton">Hint</button>
+            <h3>[<span class="pointsNum"></span>/60]</h3>
+            <div class="proceedButtons">
+                <button class="skipButton">Skip</button>
+                <button class="nextButton">Next Question</button>
+            </div>
         </div>
     </section>
     <section class="resultsSection">

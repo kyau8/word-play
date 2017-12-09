@@ -12,3 +12,14 @@ gulp.task('styles', () => {
 gulp.task('watch', () => {
     gulp.watch('styles/partials/*.scss',['styles']);
 });
+
+gulp.task('default', ['styles', 'scripts', 'watch']);
+
+gulp.task('scripts', () => {
+    gulp.src('scripts.js')
+        // .pipe(babel({
+        //     presets: ['env']
+        // }))
+        // .pipe(gulp.dest('./public/scripts'))
+        // .pipe(reload({ stream: true }));
+});

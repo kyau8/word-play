@@ -1,28 +1,49 @@
 /* HEADER STYLES */
 
+header {
+    margin: 25px 0;
+}
+
 h1 {
     font-family: $secondaryText;
     text-transform: uppercase;
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     letter-spacing: 1px;
-    padding: 0;
-    margin: 50px 0 10px 0;
+}
+
+.title {
+    width: 25%;
 }
 
 .titleText {
+    // margin: 50px 0 10px 0;
     text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
 }
 
+.title-2 {
+    text-align: right;
+}
+
+.headerWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
 .introText {
+    font-family: $primaryText;
     font-size: 1.0rem;
+    width: 55%;
 }
 
-.introText a:hover {
-    color: $accentColor;
-}
+// .introText a:hover {
+//     color: $accentColor;
+// }
 
-@media (max-width: 400px) {
-    .introText {
-        width: 250px;
-    }
-}
+// @media (max-width: 400px) {
+//     .introText {
+//         width: 250px;
+//     }
+// }

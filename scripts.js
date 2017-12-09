@@ -35,15 +35,15 @@ game.pointsCounter = function() {
         if (game.newResponse === game.originalString) {
             game.points = game.points + 6;
             $('.pointsNum').text(game.points);
-            $('.nextButton').css('display', 'inline-block');
+            $('.nextButton').css('visibility', 'visible');
             // console.log(game.points);
-            $('.hintButton').css('display', 'none');
-            $('#hintText').css('display', 'inline-block');
-            $('.skipButton').css('display', 'none');
+            $('.hintButton').css('visibility', 'hidden');
+            $('#hintText').css('visibility', 'visible');
+            $('.skipButton').css('visibility', 'hidden');
             $('.quizAnswer').css('display', 'block');
             game.winOrLose(game.points);
             $('.quizQuestion').css('display', 'none');
-            $('.submit').css('display', 'none');
+            $('.submit').css('visibility', 'hidden');
         }
     })
     // console.log(game.points);
@@ -94,12 +94,12 @@ game.nextQuestion = function(newArray) {
         e.preventDefault();
         game.randomQuestion(newArray);
         $('.quizAnswer').css('display','none');
-        $('.nextButton').css('display', 'none');
-        $('#hintText').css('display', 'none');
-        $('.hintButton').css('display', 'inline-block');
-        $('.skipButton').css('display', 'inline-block');
+        $('.nextButton').css('visibility', 'hidden');
+        $('#hintText').css('visibility', 'hidden');
+        $('.hintButton').css('visibility', 'visible');
+        $('.skipButton').css('visibility', 'visible');
         $('.quizQuestion').css('display','block');
-        $('.submit').css('display', 'block');
+        $('.submit').css('visibility', 'visible');
     });
 }
 
@@ -198,8 +198,8 @@ game.storeWord = function() {
 game.hintEvent = function() {
     $('.hintButton').on('click', function(e) {
         e.preventDefault();
-        $('#hintText').css('display', 'block');
-        $('.hintButton').css('display', 'none');
+        $('#hintText').css('visibility', 'visible');
+        $('.hintButton').css('visibility', 'hidden');
     });
 }
 
@@ -208,12 +208,12 @@ game.skipEvent = function() {
         e.preventDefault();
         $('.quizAnswer').css('display','block');
         // Display the 'next' button if the skip button is pressed, and display the correct word
-        $('.nextButton').css('display', 'inline-block');
-        $('.hintButton').css('display', 'none');
-        $('.skipButton').css('display', 'none');
+        $('.nextButton').css('visibility', 'visible');
+        $('.hintButton').css('visibility', 'hidden');
+        $('.skipButton').css('visibility', 'hidden');
         $('.quizQuestion').css('display','none');
-        $('#hintText').css('display', 'block');
-        $('.submit').css('display', 'none');
+        $('#hintText').css('visibility', 'visible');
+        $('.submit').css('visibility', 'hidden');
     });
 }
 
