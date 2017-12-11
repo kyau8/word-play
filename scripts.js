@@ -69,8 +69,8 @@ game.getQuestion = function (domain) {
             reqUrl: `https://od-api.oxforddictionaries.com/api/v1/wordlist/en/domains%3D${domain}`,
             proxyHeaders: {
                 'Accept': "application/json",
-                'app_id': 'e238a87f',
-                'app_key': '825c93de3af1b89a01edadcde2da805e'
+                'app_id': game.appId,
+                'app_key': game.appKey
             },
             xmlToJSON: false
         }
