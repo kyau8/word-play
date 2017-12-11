@@ -1,17 +1,15 @@
 /* QUESTION SECTION STYLES */
-
 .mainForm {
     text-align: center;
-    margin: 25px 0;
+    margin: 35px 0 25px 0;
 }
-
-// .quizQuestion {
-// }
 
 .wordSpace {
     background-color: white;
     border: none;
+    visibility: hidden;
 }
+
 
 input {
     margin: 1px;
@@ -22,51 +20,53 @@ input {
     background: $secondaryColor;
     color: $primaryColor;
     text-align: center;
-    border-bottom: 1px solid $secondaryColor;
+    box-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
 }
 
-@media (max-width: 450px) {
-    input {
-        width: 22px;
-        font-size: 1.6rem;
+@media (max-width: 715px) {
+    .wordSpace {
+        width: 30px;
     }
-    .quizAnswer {
-        font-size: 1.2rem;
+    input {
+        width: 40px;
     }
 }
 
-@media (max-width: 350px) {
-    input {
+@media (max-width: 600px) {
+    .wordSpace {
         width: 20px;
-        font-size: 1.4rem;
     }
-    .quizAnswer {
-        font-size: 1.0rem;
+    input {
+        width: 30px;
+        height: 55px;
+        font-size: 2.0rem;
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 500px) {
     input {
-        width: 18px;
-        font-size: 1.3rem;
+        width: 25px;
+        height: 45px;
+        font-size: 1.8rem;
     }
 }
+
 
 .submit {
     margin: 25px 0;
     font-family: $primaryText;
     width: 100%;
-    height: 50px;
+    height: 60px;
     font-size: 1.0rem;
     color: white;
     text-transform: uppercase;
-    transition: all 0.8s;
-}
-
-.submit:hover {
-    background: white;
-    border: 1px dotted $secondaryColor;
-    color: $secondaryColor;
+    box-shadow: none;
+    &:hover {
+        color: black;
+        background: white;
+        border: 1px dotted $secondaryColor;
+        color: $secondaryColor;
+    }
 }
 
 .quizAnswer {
@@ -76,14 +76,27 @@ input {
     margin: 8px 0 10px 0;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
     .quizAnswer {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 420px) {
+    .submit {
+        margin: 5px 0;
+        height: 40px;
+    }
+    .mainForm {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    input {
+        font-size: 1.2rem;
+    }
     .quizAnswer {
-        font-size: 1.0rem;
+        font-size: 1.2rem;
     }
 }

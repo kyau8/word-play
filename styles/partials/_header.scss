@@ -1,5 +1,4 @@
 /* HEADER STYLES */
-
 header {
     margin: 25px 0;
 }
@@ -13,14 +12,12 @@ h1 {
 
 .title {
     width: 25%;
+    h1 {
+        text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+    }
 }
 
-.titleText {
-    // margin: 50px 0 10px 0;
-    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
-}
-
-.title-2 {
+.titleTwo {
     text-align: right;
 }
 
@@ -29,7 +26,7 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
 }
 
 .introText {
@@ -38,10 +35,30 @@ h1 {
     width: 55%;
 }
 
-// .introText a:hover {
-//     color: $accentColor;
-// }
+@media (max-width: 860px) {
+    .title {
+        width: 35%;
+    }
+}
 
+@media (max-width: 500px) {
+    .headerWrap {
+        flex-direction: column;
+        align-items: center;
+    }
+    .introText {
+        width: 100%;
+        text-align: center;
+    }
+    .title {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        h1 {
+            display: inline-block;
+        }
+    }
+}
 // @media (max-width: 400px) {
 //     .introText {
 //         width: 250px;

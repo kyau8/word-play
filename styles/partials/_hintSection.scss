@@ -6,13 +6,6 @@
     align-items: flex-start;
 }
 
-.proceedButtons {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
 button {
     width: 140px;
     height: 60px;
@@ -26,12 +19,11 @@ button {
 .hintButton {
     background: $accentColor;
     visibility: visible;
-}
-
-.hintButton:hover {
-    background: white;
-    border: 1px dotted $accentColor;
-    color: $accentColor;
+    &:hover {
+        background: white;
+        border: 1px dotted $accentColor;
+        color: $accentColor;
+    }
 }
 
 #hintText {
@@ -40,21 +32,18 @@ button {
     visibility: hidden;
 }
 
-@media (max-width: 540px) {
-    #hintText {
-        width: 80%;
+@media (max-width: 500px) {
+    button {
+        width: 120px;
+    }
+    .nextButton {
+        width: 100%;
     }
 }
 
-@media (max-width: 400px) {
-    #hintText {
-        width: 320px;
-    }
-}
-
-@media (max-width: 330px) {
-    #hintText {
-        width: 260px;
+@media (max-width: 463px) {
+    button {
+        width: 100px;
     }
 }
 
@@ -63,32 +52,54 @@ button {
 .skipButton {
     background: $primaryColor;
     visibility: visible;
+    &:hover {
+        background: white;
+        border: 1px dotted $primaryColor;
+        color: $primaryColor;
+    }
 }
 
-.skipButton:hover {
-    background: white;
-    border: 1px dotted $primaryColor;
-    color: $primaryColor;
-}
 
 /* NEXT QUESTION BUTTON */
 .nextButton {
     background: $primaryColor;
-    visibility: hidden;
-}
-
-.nextButton:hover {
-    background: white;
-    color: $primaryColor;
-    border: 1px dotted $primaryColor;
+    display: none;
+    width: 100%;
+    &:hover {
+        background: white;
+        color: $primaryColor;
+        border: 1px dotted $primaryColor;
+    }
 }
 
 /* POINT SECTION STYLES */
 h3 {
     font-size: 2.5rem;
+    &::after {
+        content:']';
+        color: $primaryColor;
+    }
 }
 
 .pointsNum {
     color: $accentColor;
-    // text-shadow:0.5px 0.5px 1px gray;
+    &::before {
+        content:'[';
+        color: $primaryColor;
+    }
+}
+
+@media (max-width: 420px) {
+    .quizButtons {
+        flex-direction: column;
+        align-items: center;
+    }
+    button {
+        width: 100%;
+        height: 40px;
+    }
+    h3 {
+        margin: 5px 0;
+        font-size: 2.0rem;
+    }
 }

@@ -35,7 +35,7 @@ game.pointsCounter = function() {
         if (game.newResponse === game.originalString) {
             game.points = game.points + 6;
             $('.pointsNum').text(game.points);
-            $('.nextButton').css('visibility', 'visible');
+            $('.nextButton').css('display', 'block');
             // console.log(game.points);
             $('.hintButton').css('visibility', 'hidden');
             $('#hintText').css('visibility', 'visible');
@@ -44,6 +44,11 @@ game.pointsCounter = function() {
             game.winOrLose(game.points);
             $('.quizQuestion').css('display', 'none');
             $('.submit').css('visibility', 'hidden');
+        } else if (game.newResponse !== game.originalString) {
+            $('.question').css('background', 'rgb(180, 52, 52)');
+            $('.question').keypress(function() {
+                $('.question').css('background','rgb(112, 167, 250)');
+            })
         }
     })
     // console.log(game.points);
@@ -94,7 +99,7 @@ game.nextQuestion = function(newArray) {
         e.preventDefault();
         game.randomQuestion(newArray);
         $('.quizAnswer').css('display','none');
-        $('.nextButton').css('visibility', 'hidden');
+        $('.nextButton').css('display', 'none');
         $('#hintText').css('visibility', 'hidden');
         $('.hintButton').css('visibility', 'visible');
         $('.skipButton').css('visibility', 'visible');
@@ -138,7 +143,7 @@ game.splitWord = function(itemToSplit){
     for(let i = 0; i <= game.questionLength; i = i + 1) {
         // Use an if statement to print out every third character in the array, and the blank spaces, in disabled inputs. Else, print an empty input.
         if (game.questionString[i] === " ") {
-            let wordSpace = $('<input>').attr({
+            let wordSpace = $('<input class="question">').attr({
                 type: 'text',
                 value: game.questionString[i],
                 maxlength: 1,
@@ -149,7 +154,7 @@ game.splitWord = function(itemToSplit){
             });
             $('.quizQuestion').append(wordSpace);
         } else if (i % 3 === 0 || game.questionString[i] === "-" || game.questionString[i] === "'" || game.questionString[i] === "è" || game.questionString[i] === "é") {
-        let wordLetter = $('<input>').attr({
+        let wordLetter = $('<input class="question">').attr({
             type: 'text',
             value: game.questionString[i],
             maxlength: 1,
@@ -159,7 +164,7 @@ game.splitWord = function(itemToSplit){
             });
             $('.quizQuestion').append(wordLetter);
         } else {
-            let wordHiddenLetter = $('<input>').attr({
+            let wordHiddenLetter = $('<input class="question">').attr({
                 type: 'text',
                 maxlength: 1,
                 id: `answerInput${i}`
@@ -208,7 +213,7 @@ game.skipEvent = function() {
         e.preventDefault();
         $('.quizAnswer').css('display','block');
         // Display the 'next' button if the skip button is pressed, and display the correct word
-        $('.nextButton').css('visibility', 'visible');
+        $('.nextButton').css('display', 'block');
         $('.hintButton').css('visibility', 'hidden');
         $('.skipButton').css('visibility', 'hidden');
         $('.quizQuestion').css('display','none');
@@ -222,9 +227,13 @@ game.winOrLose = function(userPoints) {
     if (userPoints < 0) {
         $('.results').html(`<h1>Better luck next time.</h1>`);
         $('.resultsSection').css('display', 'block');
+        $('.questionSection').css('display', 'none');
+        $('.quizButtons').css('display', 'none');
     } else if (userPoints >= 60) {
         $('.results').html(`<h1>Bottoms up, you won!</h1>`);
         $('.resultsSection').css('display', 'block');
+        $('.questionSection').css('display', 'none');
+        $('.quizButtons').css('display', 'none');
     }
 }
 
